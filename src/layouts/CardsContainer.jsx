@@ -1,34 +1,47 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
 import CardBlock from "./CardBlock";
 
 const CardsContainer = () => {
   const cardsArray = [
     {
       rows: [
-        { title: "s2", about: "s2 is 2 series" },
-        { title: "s3", about: "s3 is 2 series" },
+        {
+          image: "assets/images/mobiles/Galaxy_a35_5g.avif",
+          name: "GALAXY A35 5G",
+        },
+        {
+          image: "assets/images/mobiles/Galaxy_s23_fe.avif",
+          name: "GALAXY S23 FE",
+        },
       ],
     },
     {
       rows: [
-        { title: "s4", about: "s4 is 2 series" },
-        { title: "s5", about: "s5 is 2 series" },
+        {
+          image: "assets/images/mobiles/Galaxy_a35_5g.avif",
+          name: "GALAXY A35 5G",
+        },
+        {
+          image: "assets/images/mobiles/Galaxy_s23_fe.avif",
+          name: "GALAXY S23 FE",
+        },
       ],
     },
   ];
   return (
-    <Container>
-      {cardsArray?.map((rows, rowsIndex) => (
-        <Row key={rowsIndex}>
-          {rows?.rows?.map((card, cardIndex) => (
-            <Col key={cardIndex}>
-              <CardBlock cardObject={card} />
-            </Col>
-          ))}
-        </Row>
-      ))}
-    </Container>
+    <>
+      <div className="cards_container">
+        {cardsArray?.map((rows, rowsIndex) => (
+          <div className="cards_row_container" key={rowsIndex}>
+            {rows?.rows?.map((card, cardIndex) => (
+              <div key={cardIndex} className="cards_card_container">
+              <CardBlock cardObject={card} key={cardIndex} />
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 

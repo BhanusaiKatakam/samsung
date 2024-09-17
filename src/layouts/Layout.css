@@ -13,7 +13,7 @@
 
 .navbar_menu_list .navbar_menu {
   cursor: pointer;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   padding: 4px 8px;
   border-radius: 12px;
@@ -28,4 +28,42 @@
 .navbar_user_container {
   display: flex;
   gap: 12px;
+}
+
+/*card styles*/
+.card_container {
+  border: none !important;
+}
+.card_body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+.card_body .card_body_title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.cards_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cards_row_container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.card_image {
+  border-radius: inherit;
+  transition: all 0.3s ease-in-out;
+}
+
+.card_image:hover {
+  transform: scale(1.05);
 }

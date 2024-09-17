@@ -4,9 +4,12 @@ import CardsContainer from "../layouts/CardsContainer";
 
 const HomeScreen = () => {
   return (
-    <div>
+    <div className="home_screen_container">
       <Hero />
-      <CardsContainer />
+      <div className="home_cards_container">
+        <CardsContainer />
+        <CardsContainer />
+      </div>
     </div>
   );
 };
